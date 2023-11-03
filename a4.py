@@ -21,6 +21,8 @@ class TTTBoard:
     def makemove(self, player, pos) -> bool:
         if pos < 0 or pos > 8 or self.board(pos) != '*':
             return False
+        self.board[pos] = player 
+        return True
 
 def has_won(self, player) -> bool:
     ps = [player] *3
@@ -118,4 +120,4 @@ if __name__ == "__main__":
     print("All tests passed!")
 
     # uncomment to play!
-    # play_tic_tac_toe()
+    play_tic_tac_toe()
